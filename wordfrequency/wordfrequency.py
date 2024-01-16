@@ -71,6 +71,10 @@ def largest_pair(par_1, par_2):
     """
     # OBS: Tenk også på situasjonen når to tall er lik! Vurder hvordan du vil handtere denne situasjonen
     # kanskje du vil skrive noen flere test metoder ?!
+    if par_1[1] > par_2[1]:
+        return par_1
+    else:
+        return par_2
     return NotImplemented  # TODO: Du må erstatte denne linjen
 
 
