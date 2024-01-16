@@ -16,7 +16,8 @@ def read_file(file_name):
     tilbake en liste av tekststrenger som representerer linjene i filen.
     """
     # Tips: kanksje "open"-funksjonen kunne være nyttig her: https://docs.python.org/3/library/functions.html#open
-    return NotImplemented  # TODO: Du må erstatte denne linjen
+    file = open(file_name)
+    return file
 
 
 def lines_to_words(lines):
@@ -73,9 +74,10 @@ def largest_pair(par_1, par_2):
     # kanskje du vil skrive noen flere test metoder ?!
     if par_1[1] > par_2[1]:
         return par_1
+    if par_1[1] == par_2[1]:
+        return "par_1 and par_2 are equal"
     else:
         return par_2
-    return NotImplemented  # TODO: Du må erstatte denne linjen
 
 
 def find_most_frequent(frequency_table):
