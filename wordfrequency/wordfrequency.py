@@ -16,7 +16,7 @@ def read_file(file_name):
     tilbake en liste av tekststrenger som representerer linjene i filen.
     """
     # Tips: kanksje "open"-funksjonen kunne være nyttig her: https://docs.python.org/3/library/functions.html#open
-    file = open(file_name)
+    file = open("C:\\Users\\Ander\\ING301\\ing301-warmup-assignment\\README.md"), "r"
     return file
 
 
