@@ -10,14 +10,14 @@ from pathlib import Path
 # Enhver funksjon kommer med en dokumentasjon som forklarer hva skal gjøres.
 
 
-def read_file(file_name):
+def read_file(file):
     """
     Denne funksjonen får et filnavn som argument og skal gi
     tilbake en liste av tekststrenger som representerer linjene i filen.
     """
     # Tips: kanksje "open"-funksjonen kunne være nyttig her: https://docs.python.org/3/library/functions.html#open
-    file = open("C:\\Users\\Ander\\ING301\\ing301-warmup-assignment\\README.md"), "r"
-    return file
+    with open(file) as lines:
+        return lines
 
 
 def lines_to_words(lines):
@@ -35,8 +35,10 @@ def lines_to_words(lines):
     # Tips: se på "split()"-funksjonen https://docs.python.org/3/library/stdtypes.html#str.split
     # i tillegg kan "strip()": https://docs.python.org/3/library/stdtypes.html#str.strip
     # og "lower()": https://docs.python.org/3/library/stdtypes.html#str.lower være nyttig
-    return NotImplemented  # TODO: Du må erstatte denne linjen
-
+    words = lines.split(',')
+    words.strip('.:;,?!')
+    words.lower()
+    return words
 
 def compute_frequency(words):
     """
@@ -46,7 +48,8 @@ def compute_frequency(words):
 
     F. eks. Inn ["hun", "hen", "han", "hen"], Ut: {"hen": 2, "hun": 1, "han": 1}
     """
-    return NotImplemented  # TODO: Du må erstatte denne linjen
+    frequencies = {words}
+    return frequency_table
 
 
 FILL_WORDS = ['og', 'dei', 'i', 'eg', 'som', 'det', 'han', 'til', 'skal', 'på', 'for', 'då', 'ikkje', 'var', 'vera']
